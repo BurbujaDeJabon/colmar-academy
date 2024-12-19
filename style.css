@@ -1,0 +1,88 @@
+* { 
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', serif;
+    line-height: 1.6;
+}
+
+/* Global */
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* Nav */
+
+header {
+    position: sticky;
+    top: 0;
+    background-color: white;
+}
+
+.primary-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-inline: 24px;
+    height: 64px;
+    border: solid 2px red;
+}
+.primary-nav__list {
+    display: flex;
+    justify-content: space-evenly;
+    list-style: none;
+    border: solid 1px red;
+}
+
+.primary-nav__link {
+    text-decoration: none;
+    margin-right: 1rem;
+}
+
+.nav-text {
+    display: none; /* hidden by default - only for larger screens */
+}
+
+.primary-nav__logo span {
+    display: none;
+}
+
+/* Jumbotron */
+
+.jumbotron__img img {
+    display: none;
+}
+
+/* Smaller screens only */
+
+@media only screen and (max-width: 625px) {
+
+}
+/* Larger screens */
+
+@media only screen and (min-width: 625px) {
+    body {
+        background-color: #e5e5e5;
+    }
+
+    .primary-nav__logo span {
+        display: inline-block;
+    }
+
+    .primary-nav__item .fa-solid {
+        display: none;
+    }
+
+    .nav-text {
+        display: inline-block; 
+    }
+
+    .jumbotron__img img {
+        display: inline-block;
+    }
+}
