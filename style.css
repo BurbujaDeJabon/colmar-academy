@@ -7,6 +7,7 @@
 body {
     font-family: 'Plus Jakarta Sans', serif;
     line-height: 1.6;
+    text-wrap: pretty;
 }
 
 /* Global */
@@ -14,6 +15,12 @@ body {
 img {
     display: block;
     max-width: 100%;
+}
+
+/* Typography */
+
+h1 {
+    font-weight: 800;
 }
 
 /* Nav */
@@ -44,7 +51,6 @@ header {
     display: flex;
     justify-content: space-evenly;
     list-style: none;
-    border: solid 1px red;
 }
 
 .primary-nav__link {
@@ -61,25 +67,66 @@ header {
 
 /* Jumbotron */
 
-.jumbotron__img img {
-    display: none;
+.jumbotron {
+    background-color: #d6d6d6;
+    border: solid 5px blue;
+}
+
+.jumbotron__left {
+    border: solid 2px pink;
+    overflow: hidden;
+}
+
+.jumbotron__right {
+    border: solid 3px green;
+    padding: 2rem;
+}
+
+
+.jumbotron-cta {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 8px;
+    width: 100%;
+    font-family: inherit;
+    background-color: #121212;
+    color: white;
+}
+
+.jumbotron-txt {
+    padding: 32px 0;
 }
 
 /* Smaller screens only */
 
-@media only screen and (max-width: 625px) {
+@media only screen and (max-width: 775px) {
+
 
 }
 /* Larger screens */
 
-@media only screen and (min-width: 625px) {
+@media only screen and (min-width: 775px) {
     body {
         background-color: #e5e5e5;
     }
 
+    .primary-nav__list {
+        gap: 1.2rem;
+    }
+
     .primary-nav__logo {
         margin-right: auto;
+        text-transform: uppercase;
+        font-weight: 700;
+    
     }
+
+    .highlight {
+        color: gray;
+    }
+
+
     .primary-nav__logo span {
         display: inline-block;
     }
@@ -89,4 +136,27 @@ header {
     .primary-nav__link .nav-text {
         display: inline-block;
     }
+
+
+    /* Larger screens Jumbotron layout */
+
+    .jumbotron {
+        display: grid;
+        grid-template-columns: 1fr 40%;
+        gap: 24px;
+        background-color: #d6d6d6;
+        padding: 1em;
+    }
+
+    .jumbotron__right {
+        display: grid;
+        place-content: center;
+        gap: 1.2rem;
+    }
+
+    .jumbotron-txt {
+        font-weight: 500;
+    }
 }
+
+
