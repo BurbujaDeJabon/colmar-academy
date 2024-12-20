@@ -198,9 +198,18 @@ header {
 
     /* Larger screens Learning */
 
+    .learning {
+        margin-inline: 32px;
+    }
+
     .learning__card-gallery {
         grid-template-columns: 1fr 1fr 1fr;
         gap: 32px;
+    }
+
+    .learning-card__desc {
+        background-color: white;
+        padding: 1em;
     }
 
 }
