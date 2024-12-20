@@ -92,10 +92,21 @@ header {
     padding: 32px 0;
 }
 
+/* Miditron */
+.miditron {
+    display: grid;
+    grid-template-columns: 1fr;
+    border: dashed 2px blue;
+    padding: 2em;
+}
+
+
 /* Smaller screens only */
 
 @media only screen and (max-width: 775px) {
-
+    .miditron__desktop-img {
+        display: none;
+    }
 
 }
 /* Larger screens */
@@ -151,6 +162,33 @@ header {
     .jumbotron-txt {
         font-weight: 500;
     }
+
+    /* Larger screens MidiTron styles */
+
+    .miditron__desktop-img {
+        display: inline-block;
+    }
+    .miditron__mobile-img {
+        display: none;
+    }
+
+    .miditron {
+        gap: 24px;
+        grid-template-columns: 60% 1fr;
+    }
+    
+    .miditron-article {
+        display: grid;
+        grid-template-columns: 65% 35%;
+        gap: 24px;
+    }
+
+    .miditron .right {
+        display: flex;
+        flex-direction: column;
+        border: solid 1px yellow;
+    }
+
 }
 
 
