@@ -72,13 +72,7 @@ header {
     border: solid 5px blue;
 }
 
-.jumbotron__left {
-    border: solid 2px pink;
-    overflow: hidden;
-}
-
 .jumbotron__right {
-    border: solid 3px green;
     padding: 2rem;
 }
 
